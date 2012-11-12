@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>dhns</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>org.gephi.graph.dhns</package>
+                <package>org.gephi.graph.dhns.core</package>
+                <package>org.gephi.graph.dhns.edge</package>
+                <package>org.gephi.graph.dhns.edge.iterators</package>
+                <package>org.gephi.graph.dhns.event</package>
+                <package>org.gephi.graph.dhns.graph</package>
+                <package>org.gephi.graph.dhns.graph.iterators</package>
+                <package>org.gephi.graph.dhns.node</package>
+                <package>org.gephi.graph.dhns.node.iterators</package>
+                <package>org.gephi.graph.dhns.predicate</package>
+                <package>org.gephi.graph.dhns.utils</package>
+                <package>org.gephi.graph.dhns.utils.avl</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/org-gephi-graph-dhns.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/org-gephi-graph-dhns.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

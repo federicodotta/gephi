@@ -31,6 +31,14 @@ public class InfoMapPanel extends javax.swing.JPanel {
     public void setDirected(boolean directed) {
         directedButtonGroup.setSelected(directed ? directedRadioButton.getModel() : undirectedRadioButton.getModel(), true);
     }
+    
+    /*public boolean isHierarchical() {
+        return jRadioButton1.isSelected();
+    }*/
+
+    /*public void setHierarchical(boolean hierarchical) {
+        buttonGroup1.setSelected(hierarchical ? jRadioButton1.getModel() : jRadioButton2.getModel(), true);
+    }*/
 
     /** ----------------------------------------------------------- */
 
@@ -44,6 +52,7 @@ public class InfoMapPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         directedButtonGroup = new javax.swing.ButtonGroup();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -89,6 +98,11 @@ public class InfoMapPanel extends javax.swing.JPanel {
 
         directedButtonGroup.add(undirectedRadioButton);
         undirectedRadioButton.setText(org.openide.util.NbBundle.getMessage(InfoMapPanel.class, "InfoMapPanel.undirectedRadioButton.text")); // NOI18N
+        undirectedRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                undirectedRadioButtonActionPerformed(evt);
+            }
+        });
 
         jCheckBox1.setText(org.openide.util.NbBundle.getMessage(InfoMapPanel.class, "InfoMapPanel.jCheckBox1.text")); // NOI18N
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -102,19 +116,17 @@ public class InfoMapPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(undirectedRadioButton)
-                            .addComponent(directedRadioButton)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jCheckBox1)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox1))
                 .addContainerGap(22, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(directedRadioButton)
+                    .addComponent(undirectedRadioButton))
+                .addContainerGap(314, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,12 +155,17 @@ public class InfoMapPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
+    private void undirectedRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_undirectedRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_undirectedRadioButtonActionPerformed
+
     public boolean getReorderCommunities() {
         return jCheckBox1.isSelected();
     
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup directedButtonGroup;
     protected javax.swing.JRadioButton directedRadioButton;
     private javax.swing.JCheckBox jCheckBox1;
